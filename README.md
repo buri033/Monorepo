@@ -67,12 +67,12 @@ Ambos componentes cuentan con sus imágenes públicas pre-construidas en DockerH
 
 | Componente | Repositorio DockerHub | Tag | Comando de Descarga |
 | :--- | :--- | :--- | :--- |
-| **Backend API** | `juanfer2006/banco-backend` | `latest` | `docker pull juanfer2006/banco-backend:latest` |
-| **Frontend Web** | `juanfer2006/banco-frontend` | `latest` | `docker pull juanfer2006/banco-frontend:latest` |
+| **Backend API** | `buri247/banco-backend` | `latest` | `docker pull buri247/banco-backend:latest` |
+| **Frontend Web** | `buri247/banco-frontend` | `latest` | `docker pull buri247/banco-frontend:latest` |
 
 ### Enlaces en DockerHub:
-* Backend: [https://hub.docker.com/r/juanfer2006/banco-backend](https://hub.docker.com/r/juanfer2006/banco-backend)
-* Frontend: [https://hub.docker.com/r/juanfer2006/banco-frontend](https://hub.docker.com/r/juanfer2006/banco-frontend)
+* Backend: [https://hub.docker.com/r/buri247/banco-backend](https://hub.docker.com/r/buri247/banco-backend)
+* Frontend: [https://hub.docker.com/r/buri247/banco-frontend](https://hub.docker.com/r/buri247/banco-frontend)
 
 ---
 

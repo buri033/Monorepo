@@ -30,7 +30,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: juanfer2006/banco-backend:latest
+    image: buri247/banco-backend:latest
     container_name: banco-backend
     restart: unless-stopped
     ports:
@@ -55,7 +55,7 @@ services:
       dockerfile: Dockerfile
       args:
         VITE_API_URL: http://localhost:3000
-    image: juanfer2006/banco-frontend:latest
+    image: buri247/banco-frontend:latest
     container_name: banco-frontend
     restart: unless-stopped
     ports:
