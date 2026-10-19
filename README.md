@@ -167,16 +167,16 @@ Para validar la comunicación íntegra entre todos los niveles de la arquitectur
 
 | Código | Historia de Usuario | Criterios de Aceptación y Alcance | Responsable Asignado |
 | :--- | :--- | :--- | :--- |
-| **HU-01** | Autenticación Segura y Registro de Clientes | Endpoint `/auth/register` y `/auth/login`, cifrado bcrypt, emisión de JWT y formulario web con validaciones. | **Juan Fernando Ramírez (juanfer2006)** |
-| **HU-02** | Contabilidad por Partida Doble (*Double-Entry Ledger*) | Esquema de base de datos relacional para cuentas y asientos (`ledger_entries`), con verificación de cuadre a cero. | **Juan Fernando Ramírez (juanfer2006)** |
-| **HU-03** | Transferencias Inmediatas e Idempotencia | Transferencia entre cuentas con control de concurrencia, idempotency keys y manejo de errores tipificados. | **Tomás Buriticá (buri033)** |
-| **HU-04** | Motor de Créditos y Amortización Francesa | Algoritmo de cuota fija con tabla de amortización decreciente, cálculo de intereses y motor de reglas de riesgo. | **Tomás Buriticá (buri033)** |
-| **HU-05** | Documentación de la API con Swagger / OpenAPI | Integración de Swagger UI en `/api-docs` documentando todos los esquemas, parámetros y códigos de respuesta. | **Juan Fernando Ramírez (juanfer2006)** |
-| **HU-06** | Contenerización Multi-servicio y Docker Compose | Dockerfiles optimizados para backend y frontend con Alpine Linux, y archivo `docker-compose.yml` orquestador. | **Tomás Buriticá (buri033)** |
-| **HU-07** | Dashboard Bancario y Resumen de Cuentas | Visualización de saldo consolidado, métricas financieras, movimientos recientes y estado de productos. | **Juan Fernando Ramírez (juanfer2006)** |
-| **HU-08** | Emisión y Gestión de Tarjetas (Algoritmo Luhn) | Generación de números de tarjeta válidos por Luhn, visualización interactiva y opción de congelar/descongelar. | **Tomás Buriticá (buri033)** |
-| **HU-09** | Alcancías Virtuales (Cajitas de Ahorro) | Creación de metas de ahorro, seguimiento porcentual y traslado de saldo entre cuenta corriente y cajita. | **Tomás Buriticá (buri033)** |
-| **HU-10** | Pruebas Automatizadas Unitarias y E2E Playwright | Suite de 33 pruebas de dominio en backend, 8 pruebas de estado en frontend y 3 suites completas en Playwright. | **Tomás Buriticá (buri033)** & **Juan Fernando Ramírez (juanfer2006)** |
+| **HU-01** | Autenticación Segura y Registro de Clientes | Endpoint `/auth/register` y `/auth/login`, cifrado bcrypt, emisión de JWT y formulario web con validaciones. | **Juan Fernando Castañeda** |
+| **HU-02** | Contabilidad por Partida Doble (*Double-Entry Ledger*) | Esquema de base de datos relacional para cuentas y asientos (`ledger_entries`), con verificación de cuadre a cero. | **Juan Fernando Castañeda** |
+| **HU-03** | Transferencias Inmediatas e Idempotencia | Transferencia entre cuentas con control de concurrencia, idempotency keys y manejo de errores tipificados. | **Tomás Buriticá** |
+| **HU-04** | Motor de Créditos y Amortización Francesa | Algoritmo de cuota fija con tabla de amortización decreciente, cálculo de intereses y motor de reglas de riesgo. | **Tomás Buriticá** |
+| **HU-05** | Documentación de la API con Swagger / OpenAPI | Integración de Swagger UI en `/api-docs` documentando todos los esquemas, parámetros y códigos de respuesta. | **Juan Fernando Castañeda** |
+| **HU-06** | Contenerización Multi-servicio y Docker Compose | Dockerfiles optimizados para backend y frontend con Alpine Linux, y archivo `docker-compose.yml` orquestador. | **Tomás Buriticá** |
+| **HU-07** | Dashboard Bancario y Resumen de Cuentas | Visualización de saldo consolidado, métricas financieras, movimientos recientes y estado de productos. | **Juan Fernando Castañeda** |
+| **HU-08** | Emisión y Gestión de Tarjetas (Algoritmo Luhn) | Generación de números de tarjeta válidos por Luhn, visualización interactiva y opción de congelar/descongelar. | **Tomás Buriticá** |
+| **HU-09** | Alcancías Virtuales (Cajitas de Ahorro) | Creación de metas de ahorro, seguimiento porcentual y traslado de saldo entre cuenta corriente y cajita. | **Tomás Buriticá** |
+| **HU-10** | Pruebas Automatizadas Unitarias y E2E Playwright | Suite de 33 pruebas de dominio en backend, 8 pruebas de estado en frontend y 3 suites completas en Playwright. | **Tomás Buriticá** & **Juan Fernando Castañeda** |
 
 ---
 
