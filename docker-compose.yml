@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # ==========================================================
+  # 1. Base de Datos Relacional: PostgreSQL 16
+  # ==========================================================
+  database:
+    image: postgres:16-alpine
+    container_name: banco-database
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: banco_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/db:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d banco_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - banco-network
+
+  # ==========================================================
+  # 2. Backend API: Node.js + Express + TypeScript
+  # ==========================================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: juanfer2006/banco-backend:latest
+    container_name: banco-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      NODE_ENV: production
+      DATABASE_URL: postgresql://postgres:postgrespassword@database:5432/banco_db
+      JWT_SECRET: supersecretjwtkey_banco_mvp_2026
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - banco-network
+
+  # ==========================================================
+  # 3. Frontend Web: React 18 + Vite + NGINX Alpine
+  # ==========================================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:3000
+    image: juanfer2006/banco-frontend:latest
+    container_name: banco-frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - banco-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  banco-network:
+    driver: bridge
